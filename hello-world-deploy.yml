@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: rido4good/hello-world
+        image: rido4good/hello-world:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
