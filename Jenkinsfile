@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage("Checkout") {
             steps {
-                git branch: 'main', credentialsId: 'github', url: 'https://github.com/ridodomayana/Register-Ops-CD.git'
+                git branch: 'main', credentialsId: 'github', url: 'https://github.com/ridodomayana/hello-world-ops-CD.git'
             }
         }
         stage("Validating YAML Files") {
