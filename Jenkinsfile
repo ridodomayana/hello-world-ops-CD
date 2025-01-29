@@ -14,16 +14,16 @@ pipeline {
         stage("Validating YAML Files") {
             steps {
                 echo 'Validating Kubernetes YAML files...'
-                sh 'kubectl apply --dry-run=client -f regapp-deploy.yml'
-                sh 'kubectl apply --dry-run=client -f regapp-service.yml'
+                sh 'kubectl apply --dry-run=client -f hello-world-deploy.yml'
+                sh 'kubectl apply --dry-run=client -f hello-world-service.yml'
             }
         }
         stage("Apply YAML Files") {
             steps {
                 echo 'Applying Kubernetes YAML files...'
                 sh '''
-                kubectl apply -f regapp-deploy.yml
-                kubectl apply -f regapp-service.yml
+                kubectl apply -f hello-world-deploy.yml
+                kubectl apply -f hello-world-service.yml
                 '''
             }
         }
